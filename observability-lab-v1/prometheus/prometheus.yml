@@ -1,0 +1,12 @@
+global:
+  scrape_interval: 15s # Prometheus va récupérer les métriques toutes les 15 secondes
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: 'node_exporter'
+    static_configs:
+      # On utilise le nom du conteneur Docker comme nom d'hôte
+      - targets: ['node_exporter:9100']

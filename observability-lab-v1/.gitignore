@@ -1,0 +1,7 @@
+# Ignorer les volumes de données locaux pour ne pas les pousser sur GitHub
+prometheus_data/
+grafana_data/
+
+# Fichiers OS et éditeurs
+.DS_Store
+.vscode/
